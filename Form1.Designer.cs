@@ -138,10 +138,10 @@ namespace KamikazeStream
             this.sideBar.Controls.Add(this.button4);
             this.sideBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sideBar.Location = new System.Drawing.Point(0, 100);
-            this.sideBar.MaximumSize = new System.Drawing.Size(266, 0);
+            this.sideBar.MaximumSize = new System.Drawing.Size(157, 0);
             this.sideBar.MinimumSize = new System.Drawing.Size(44, 0);
             this.sideBar.Name = "sideBar";
-            this.sideBar.Size = new System.Drawing.Size(44, 649);
+            this.sideBar.Size = new System.Drawing.Size(157, 649);
             this.sideBar.TabIndex = 1;
             // 
             // flowLayoutPanel2
@@ -266,7 +266,7 @@ namespace KamikazeStream
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.sideBar);
             this.Controls.Add(this.panel1);
