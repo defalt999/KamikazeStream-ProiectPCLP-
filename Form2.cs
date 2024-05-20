@@ -9,7 +9,7 @@ namespace KamikazeStream
 {
     public partial class Form2 : Form
     {
-        private ChromiumWebBrowser chromeBrowser;
+        
 
         public Form2()
         {
@@ -30,7 +30,10 @@ namespace KamikazeStream
             richTextBox1.Text = movie.Description;
             pictureBox1.Image = Image.FromFile(movie.ImagePath);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            
+            textBox1.ReadOnly = true;
+            textBox3.ReadOnly = true;
+            richTextBox1.ReadOnly = true;
+
 
 
 
