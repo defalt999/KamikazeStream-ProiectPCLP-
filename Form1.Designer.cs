@@ -199,7 +199,7 @@ namespace KamikazeStream
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.Location = new System.Drawing.Point(3, 51);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(263, 36);
+            this.button3.Size = new System.Drawing.Size(154, 36);
             this.button3.TabIndex = 4;
             this.button3.Text = "             Utilizator";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
