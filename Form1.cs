@@ -10,6 +10,7 @@ namespace KamikazeStream
     public partial class Form1 : Form
     {
         private List<Film> filme;
+        private List<Film> watchlist;
 
         public Form1()
         {
@@ -109,6 +110,11 @@ namespace KamikazeStream
                 MessageBox.Show("Eroare");
             }
         }
+        private void watchList()
+        {
+            bagapoze();
+
+        }
 
         private void ShowMovieDetails(Film film)
         {
@@ -122,6 +128,19 @@ namespace KamikazeStream
         {
             Form3 form3 = new Form3();
             form3.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.Visible = false;
+           
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.Visible = true;
+           
         }
     }
 }

@@ -44,6 +44,8 @@ namespace KamikazeStream
             this.button4 = new System.Windows.Forms.Button();
             this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.sideBar.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
@@ -85,6 +87,8 @@ namespace KamikazeStream
             // sideBar
             // 
             this.sideBar.BackColor = System.Drawing.Color.Black;
+            this.sideBar.Controls.Add(this.button2);
+            this.sideBar.Controls.Add(this.button1);
             this.sideBar.Controls.Add(this.flowLayoutPanel2);
             this.sideBar.Controls.Add(this.button4);
             this.sideBar.Dock = System.Windows.Forms.DockStyle.Left;
@@ -104,7 +108,7 @@ namespace KamikazeStream
             this.flowLayoutPanel2.Controls.Add(this.panel14);
             this.flowLayoutPanel2.Controls.Add(this.panel15);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 87);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(266, 0);
             this.flowLayoutPanel2.TabIndex = 6;
@@ -152,7 +156,7 @@ namespace KamikazeStream
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(3, 9);
+            this.button4.Location = new System.Drawing.Point(3, 93);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(154, 36);
             this.button4.TabIndex = 5;
@@ -175,6 +179,40 @@ namespace KamikazeStream
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1213, 649);
             this.flowLayoutPanel1.TabIndex = 2;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(3, 45);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(154, 36);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "             WatchList";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(3, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(154, 36);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "             Acasa";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form1
             // 
@@ -211,6 +249,8 @@ namespace KamikazeStream
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Timer sidebarTimer;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
 
