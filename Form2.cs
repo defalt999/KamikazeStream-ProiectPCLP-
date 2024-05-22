@@ -5,19 +5,18 @@ using CefSharp;
 using CefSharp.WinForms;
 using Microsoft.Web.WebView2.Core;
 using System.Text;
+using System.Collections.Generic;
+
 namespace KamikazeStream
 {
     public partial class Form2 : Form
     {
-        
+        private List<Film> listaVizionare;
 
         public Form2()
         {
             InitializeComponent();
             
-
-
-
         }
        
 
@@ -33,11 +32,17 @@ namespace KamikazeStream
             textBox1.ReadOnly = true;
             textBox3.ReadOnly = true;
             richTextBox1.ReadOnly = true;
+            button2.Click += (sender, e) => adaugaWatchList(movie);
+            button1.Click += (sender, e) => stergeWatchList(movie);
+        }
 
-
-
-
-
+        public void adaugaWatchList(Film movie)
+        {
+            listaVizionare.Add(movie);
+        }
+        public void stergeWatchList(Film movie)
+        {
+            MessageBox.Show("OK!");
         }
 
     }

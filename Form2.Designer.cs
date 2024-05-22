@@ -33,11 +33,11 @@ namespace KamikazeStream
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -77,6 +77,15 @@ namespace KamikazeStream
             this.panel2.Size = new System.Drawing.Size(616, 331);
             this.panel2.TabIndex = 2;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(468, 242);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(132, 65);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Remove from Watchlist";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // richTextBox1
             // 
             this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -109,22 +118,13 @@ namespace KamikazeStream
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(468, 242);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(132, 65);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Remove from Watchlist";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(318, 242);
+            this.button2.Location = new System.Drawing.Point(320, 242);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(132, 65);
+            this.button2.Size = new System.Drawing.Size(133, 65);
             this.button2.TabIndex = 8;
-            this.button2.Text = "Add to Watchlist";
+            this.button2.Text = "Add to watchlist";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // Form2
@@ -155,7 +155,7 @@ namespace KamikazeStream
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

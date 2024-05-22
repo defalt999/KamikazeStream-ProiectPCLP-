@@ -4,18 +4,32 @@ using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 using Newtonsoft.Json;
+using NAudio.Wave;
 
 namespace KamikazeStream
 {
     public partial class Form1 : Form
     {
         private List<Film> filme;
-        private List<Film> watchlist;
+        
 
         public Form1()
         {
             InitializeComponent();
             bagapoze();
+            bagamuzica();
+        }
+
+        private AudioFileReader melodieBck;
+        private WaveOutEvent muzica;
+        public void bagamuzica()
+        {
+            melodieBck = new AudioFileReader("C:\\Users\\1defa\\OneDrive\\Desktop\\extra\\backmusic.wav");
+            muzica = new WaveOutEvent();
+            muzica.Init(melodieBck);
+            muzica.Play();
+            
+            
         }
 
         bool menuExtend;
@@ -80,7 +94,7 @@ namespace KamikazeStream
                     pictureBox.Height = 300;
                     pictureBox.Margin = new Padding(10);
 
-                    
+
                     if (File.Exists(film.ImagePath))
                     {
                         pictureBox.Image = Image.FromFile(film.ImagePath);
@@ -88,10 +102,10 @@ namespace KamikazeStream
                     else
                     {
                         MessageBox.Show("Nu e imaginea");
-                        continue; 
+                        continue;
                     }
 
-                    
+
                     pictureBox.Click += (sender, e) => ShowMovieDetails(film);
 
                     flowLayoutPanel1.Controls.Add(pictureBox);
@@ -110,12 +124,6 @@ namespace KamikazeStream
                 MessageBox.Show("Eroare");
             }
         }
-        private void watchList()
-        {
-            bagapoze();
-
-        }
-
         private void ShowMovieDetails(Film film)
         {
             Form2 movieDetailsForm = new Form2();
@@ -126,21 +134,45 @@ namespace KamikazeStream
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Form3 form3 = new Form3();
-            form3.Show();
+            Form3 Detalii = new Form3();
+            Detalii.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            flowLayoutPanel1.Visible = false;
-           
-            
+            Form4 watchlist = new Form4();
+            watchlist.ShowDialog();
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            flowLayoutPanel1.Visible = true;
-           
+            
+
+        }
+        bool extend = false;
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (extend == false)
+            {
+                flowLayoutPanelVolum.Height = 113;
+                extend = true;
+            }
+            else
+            {
+                flowLayoutPanelVolum.Height = 36;
+                extend = false;
+            }
+
+        }
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+            muzicavolum(trackBar1.Value/10f);
+        }
+        private void muzicavolum(float vol)
+        {
+            muzica.Volume = vol;
         }
     }
 }
