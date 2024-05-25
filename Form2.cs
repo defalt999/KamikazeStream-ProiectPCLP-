@@ -11,12 +11,13 @@ namespace KamikazeStream
 {
     public partial class Form2 : Form
     {
-        private List<Film> listaVizionare;
-
+        
+        private Form4 form4;
         public Form2()
         {
             InitializeComponent();
-            
+            form4 = new Form4();
+
         }
        
 
@@ -38,13 +39,29 @@ namespace KamikazeStream
 
         public void adaugaWatchList(Film movie)
         {
-            listaVizionare.Add(movie);
+            if (!watchlist.listaVizionare.Contains(movie))
+            {
+                watchlist.listaVizionare.Add(movie);
+                MessageBox.Show("Filmul adaugat in lista");
+            }
+            else
+            {
+                MessageBox.Show("Filmul este deja in lista");
+            }
+            
         }
         public void stergeWatchList(Film movie)
         {
-            MessageBox.Show("OK!");
-        }
-
+            if (watchlist.listaVizionare.Contains(movie))
+            {
+                watchlist.listaVizionare.Remove(movie);
+                MessageBox.Show("Filmul sters din lista");
+            }
+            else
+            {
+                MessageBox.Show("Filmul nu este in lista");
+            }
+        }       
     }
 }
 

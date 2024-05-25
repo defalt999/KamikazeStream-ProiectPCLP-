@@ -128,7 +128,7 @@ namespace KamikazeStream
             this.flowLayoutPanelVolum.Controls.Add(this.trackBar1);
             this.flowLayoutPanelVolum.Location = new System.Drawing.Point(3, 45);
             this.flowLayoutPanelVolum.Name = "flowLayoutPanelVolum";
-            this.flowLayoutPanelVolum.Size = new System.Drawing.Size(151, 113);
+            this.flowLayoutPanelVolum.Size = new System.Drawing.Size(151, 36);
             this.flowLayoutPanelVolum.TabIndex = 9;
             // 
             // button3
@@ -165,7 +165,7 @@ namespace KamikazeStream
             this.flowLayoutPanel2.Controls.Add(this.panel14);
             this.flowLayoutPanel2.Controls.Add(this.panel15);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 164);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 87);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(266, 0);
             this.flowLayoutPanel2.TabIndex = 6;
@@ -213,7 +213,7 @@ namespace KamikazeStream
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(3, 170);
+            this.button1.Location = new System.Drawing.Point(3, 93);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(154, 36);
             this.button1.TabIndex = 7;
@@ -230,7 +230,7 @@ namespace KamikazeStream
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(3, 212);
+            this.button4.Location = new System.Drawing.Point(3, 135);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(154, 45);
             this.button4.TabIndex = 5;

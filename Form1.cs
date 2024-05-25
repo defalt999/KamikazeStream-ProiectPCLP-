@@ -11,8 +11,18 @@ namespace KamikazeStream
     public partial class Form1 : Form
     {
         private List<Film> filme;
-        
+        private AudioFileReader melodieBck;
+        private WaveOutEvent muzica;
 
+        public void bagamuzica()
+                {
+                    melodieBck = new AudioFileReader("C:\\Users\\1defa\\OneDrive\\Desktop\\extra\\backmusic.wav");
+                    muzica = new WaveOutEvent();
+                    muzica.Init(melodieBck);
+                    muzica.Play();
+            
+            
+                }
         public Form1()
         {
             InitializeComponent();
@@ -20,17 +30,8 @@ namespace KamikazeStream
             bagamuzica();
         }
 
-        private AudioFileReader melodieBck;
-        private WaveOutEvent muzica;
-        public void bagamuzica()
-        {
-            melodieBck = new AudioFileReader("C:\\Users\\1defa\\OneDrive\\Desktop\\extra\\backmusic.wav");
-            muzica = new WaveOutEvent();
-            muzica.Init(melodieBck);
-            muzica.Play();
-            
-            
-        }
+        
+        
 
         bool menuExtend;
 
@@ -73,16 +74,7 @@ namespace KamikazeStream
 
         private void bagapoze()
         {
-            string jsonPath = "C:\\Deflat C++\\KamikazeStream-ProiectPCLP\\dateFilme.json";
-
-            if (!File.Exists(jsonPath))
-            {
-                MessageBox.Show("Nu e jsonu");
-                return;
-            }
-
-            try
-            {
+                string jsonPath = "C:\\Deflat C++\\KamikazeStream-ProiectPCLP\\dateFilme.json";
                 string json = File.ReadAllText(jsonPath);
                 filme = JsonConvert.DeserializeObject<List<Film>>(json);
 
@@ -92,22 +84,9 @@ namespace KamikazeStream
                     pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
                     pictureBox.Width = 200;
                     pictureBox.Height = 300;
-                    pictureBox.Margin = new Padding(10);
-
-
-                    if (File.Exists(film.ImagePath))
-                    {
-                        pictureBox.Image = Image.FromFile(film.ImagePath);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Nu e imaginea");
-                        continue;
-                    }
-
-
+                    pictureBox.Margin = new Padding(10);                   
+                    pictureBox.Image = Image.FromFile(film.ImagePath);
                     pictureBox.Click += (sender, e) => ShowMovieDetails(film);
-
                     flowLayoutPanel1.Controls.Add(pictureBox);
                     //Cod de pe net ca sa nu flickereasca pozele
                     //==============================================
@@ -118,11 +97,6 @@ namespace KamikazeStream
                     }
                     //=============================================
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Eroare");
-            }
         }
         private void ShowMovieDetails(Film film)
         {
@@ -141,6 +115,8 @@ namespace KamikazeStream
         private void button1_Click(object sender, EventArgs e)
         {
             Form4 watchlist = new Form4();
+            watchlist.Text = "Watchlist";
+           
             watchlist.ShowDialog();
 
         }
