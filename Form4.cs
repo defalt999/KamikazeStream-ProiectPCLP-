@@ -19,6 +19,24 @@ namespace KamikazeStream
 
         private void arataWatchListu()
         {
+            if (watchlist.listaVizionare.Count == 0)
+            {
+                RichTextBox text = new RichTextBox();
+                text.Width = 1400;
+                text.Height = 600;
+                text.Font = new Font("Arial", 60);
+                text.Multiline = true;
+                text.Text = "Lista este goala";
+                text.ReadOnly = true;
+                //stackoverflow
+                text.SelectAll();
+                text.SelectionAlignment = HorizontalAlignment.Center;
+                text.DeselectAll();
+                //===========================
+
+
+                flowLayoutPanel1.Controls.Add(text);               
+            }
             
             foreach (var film in watchlist.listaVizionare)
             {
@@ -38,6 +56,12 @@ namespace KamikazeStream
             movieDetailsForm.SetMovieDetails(film);
             movieDetailsForm.Text = film.Title;
             movieDetailsForm.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.Controls.Clear();
+            arataWatchListu();
         }
     }
 }
