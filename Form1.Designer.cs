@@ -59,7 +59,6 @@ namespace KamikazeStream
             this.flowLayoutPanelVolum.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.flowLayoutPanel2.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -104,6 +103,7 @@ namespace KamikazeStream
             this.sideBar.Controls.Add(this.flowLayoutPanel2);
             this.sideBar.Controls.Add(this.button1);
             this.sideBar.Controls.Add(this.flowLayoutPanel3);
+            this.sideBar.Controls.Add(this.button4);
             this.sideBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sideBar.Location = new System.Drawing.Point(0, 100);
             this.sideBar.MaximumSize = new System.Drawing.Size(157, 0);
@@ -237,9 +237,9 @@ namespace KamikazeStream
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(3, 3);
+            this.button4.Location = new System.Drawing.Point(3, 185);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(154, 45);
+            this.button4.Size = new System.Drawing.Size(151, 45);
             this.button4.TabIndex = 5;
             this.button4.Text = "             Despre Aplicatie";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -255,7 +255,6 @@ namespace KamikazeStream
             // 
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.Black;
-            this.flowLayoutPanel1.Controls.Add(this.button4);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(157, 100);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -270,7 +269,7 @@ namespace KamikazeStream
             this.flowLayoutPanel3.Controls.Add(this.button9);
             this.flowLayoutPanel3.Location = new System.Drawing.Point(3, 135);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(148, 177);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(148, 44);
             this.flowLayoutPanel3.TabIndex = 10;
             // 
             // button6
@@ -288,6 +287,7 @@ namespace KamikazeStream
             this.button6.Text = "             Categorii";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button7
             // 
@@ -356,7 +356,6 @@ namespace KamikazeStream
             this.flowLayoutPanelVolum.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.flowLayoutPanel2.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
 

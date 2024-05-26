@@ -13,7 +13,7 @@ namespace KamikazeStream
         private List<Film> filme;
         private AudioFileReader melodieBck;
         private WaveOutEvent muzica;
-        
+       
 
         public void bagamuzica()
                 {
@@ -127,9 +127,12 @@ namespace KamikazeStream
 
         private void button2_Click(object sender, EventArgs e)
         {
+            flowLayoutPanel1.Controls.Clear();
+            afisate = false;
             if (afisate == false)
             {
                 bagapoze();
+
             }
         }
         bool extend = false;
@@ -162,7 +165,7 @@ namespace KamikazeStream
             flowLayoutPanel1.Controls.Clear();
             afisate = false;
             bagaThriller();
-            afisate = true;
+            
 
         }
 
@@ -171,7 +174,7 @@ namespace KamikazeStream
             flowLayoutPanel1.Controls.Clear();
             afisate = false;
             bagaHorror();
-            afisate = true;
+            
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -179,19 +182,73 @@ namespace KamikazeStream
             flowLayoutPanel1.Controls.Clear();
             afisate = false;
             bagaActiune();
-            afisate = true;
+            
         }
         private void bagaThriller()
         {
-
+            foreach (var film in filme)
+            {
+                if (film.Category == "Thriller")
+                {
+                    PictureBox pictureBox = new PictureBox();
+                    pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+                    pictureBox.Width = 200;
+                    pictureBox.Height = 300;
+                    pictureBox.Margin = new Padding(10);
+                    pictureBox.Image = Image.FromFile(film.ImagePath);
+                    pictureBox.Click += (sender, e) => ShowMovieDetails(film);
+                    flowLayoutPanel1.Controls.Add(pictureBox);
+                }
+            }
         }
         private void bagaHorror()
         {
-
+            foreach (var film in filme)
+            {
+                if (film.Category == "Horror")
+                {
+                    PictureBox pictureBox = new PictureBox();
+                    pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+                    pictureBox.Width = 200;
+                    pictureBox.Height = 300;
+                    pictureBox.Margin = new Padding(10);
+                    pictureBox.Image = Image.FromFile(film.ImagePath);
+                    pictureBox.Click += (sender, e) => ShowMovieDetails(film);
+                    flowLayoutPanel1.Controls.Add(pictureBox);
+                }
+            }
         }
         private void bagaActiune()
         {
-
+            foreach (var film in filme)
+            {
+                if (film.Category == "Action")
+                {
+                    PictureBox pictureBox = new PictureBox();
+                    pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+                    pictureBox.Width = 200;
+                    pictureBox.Height = 300;
+                    pictureBox.Margin = new Padding(10);
+                    pictureBox.Image = Image.FromFile(film.ImagePath);
+                    pictureBox.Click += (sender, e) => ShowMovieDetails(film);
+                    flowLayoutPanel1.Controls.Add(pictureBox);
+                }
+            }
+        }
+        bool intins;
+        private void button6_Click(object sender, EventArgs e)
+        {
+            
+            if (intins == false)
+            {
+                flowLayoutPanel3.Height = 172;
+                intins = true;
+            }
+            else
+            {
+                flowLayoutPanel3.Height = 36;
+                intins = false;
+            }
         }
     }
 }

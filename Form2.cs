@@ -38,6 +38,8 @@ namespace KamikazeStream
             button2.Click += (sender, e) => adaugaWatchList(movie);
             button1.Click += (sender, e) => stergeWatchList(movie);
             button3.Click += (sender, e) => playerIan(movie);
+            label1.Text = movie.MinimumAge + "+";
+            label2.Text = movie.Category;
         }
 
         public void adaugaWatchList(Film movie)
