@@ -13,5 +13,7 @@ namespace KamikazeStream
         public string Director { get; set; }
         public string ImagePath { get; set; }
         public string TrailerLink { get; set; }
+        public string Category { get; set; }
+        public string MinimumAge { get; set; }
     }
 }

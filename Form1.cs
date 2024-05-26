@@ -13,6 +13,7 @@ namespace KamikazeStream
         private List<Film> filme;
         private AudioFileReader melodieBck;
         private WaveOutEvent muzica;
+        
 
         public void bagamuzica()
                 {
@@ -20,20 +21,22 @@ namespace KamikazeStream
                     muzica = new WaveOutEvent();
                     muzica.Init(melodieBck);
                     muzica.Play();
-            
-            
+                    
+
                 }
         public Form1()
         {
             InitializeComponent();
             bagapoze();
             bagamuzica();
+            
         }
 
         
         
 
         bool menuExtend;
+        bool afisate;
 
         private void button5_Click(object sender, EventArgs e)
         {
@@ -97,6 +100,7 @@ namespace KamikazeStream
                     }
                     //=============================================
                 }
+            afisate = true;
         }
         private void ShowMovieDetails(Film film)
         {
@@ -123,8 +127,10 @@ namespace KamikazeStream
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
-
+            if (afisate == false)
+            {
+                bagapoze();
+            }
         }
         bool extend = false;
         private void button3_Click(object sender, EventArgs e)
@@ -150,6 +156,42 @@ namespace KamikazeStream
         {
             muzica.Volume = vol;
         }
-        
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.Controls.Clear();
+            afisate = false;
+            bagaThriller();
+            afisate = true;
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.Controls.Clear();
+            afisate = false;
+            bagaHorror();
+            afisate = true;
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.Controls.Clear();
+            afisate = false;
+            bagaActiune();
+            afisate = true;
+        }
+        private void bagaThriller()
+        {
+
+        }
+        private void bagaHorror()
+        {
+
+        }
+        private void bagaActiune()
+        {
+
+        }
     }
 }

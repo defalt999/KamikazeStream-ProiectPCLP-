@@ -6,17 +6,19 @@ using CefSharp.WinForms;
 using Microsoft.Web.WebView2.Core;
 using System.Text;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace KamikazeStream
 {
     public partial class Form2 : Form
     {
+
         
-        private Form4 form4;
         public Form2()
         {
             InitializeComponent();
-            form4 = new Form4();
+            
+
 
         }
        
@@ -35,6 +37,7 @@ namespace KamikazeStream
             richTextBox1.ReadOnly = true;
             button2.Click += (sender, e) => adaugaWatchList(movie);
             button1.Click += (sender, e) => stergeWatchList(movie);
+            button3.Click += (sender, e) => playerIan(movie);
         }
 
         public void adaugaWatchList(Film movie)
@@ -61,7 +64,25 @@ namespace KamikazeStream
             {
                 MessageBox.Show("Filmul nu este in lista");
             }
-        }       
+        }
+        public void playerIan(Film movie)
+        {
+            user utilizator = new user();
+            utilizator.nume = "Denis";
+            utilizator.varsta = 15;
+            int minFilm = int.Parse(movie.MinimumAge);
+            if (utilizator.varsta >= minFilm)
+            {
+                Process.Start(movie.TrailerLink);
+            }
+            else
+            {
+                MessageBox.Show("Esti prea mic "+ utilizator.nume);
+            }
+            
+        }
+
+        
     }
 }
 
